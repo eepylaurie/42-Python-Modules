@@ -42,20 +42,20 @@ def check_plant_health(
 
 class GardenManager:
     def __init__(self) -> None:
-        self.garden: list[str] = []
+        self.plants: list[str] = []
 
     def add_plant(self, plant_name: str) -> None:
         if plant_name == "":
             raise PlantError("Plant name cannot be empty!")
-        self.garden.append(plant_name)
+        self.plants.append(plant_name)
         print(f"Added {plant_name} successfully")
 
     def water_plants(self) -> None:
         print("Opening watering system")
         try:
-            if not self.garden:
+            if not self.plants:
                 raise WaterError("No plants to water!")
-            for plant in self.garden:
+            for plant in self.plants:
                 print(f"Watering {plant} - success")
         except WaterError as e:
             print(f"Error: {e}")
