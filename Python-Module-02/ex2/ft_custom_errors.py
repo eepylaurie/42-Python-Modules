@@ -47,7 +47,7 @@ def garden_operations() -> None:
     print()
 
 
-def test_custom_error_types() -> None:
+def test_custom_errors() -> None:
     print("=== Custom Garden Errors Demo ===")
     print()
     garden_operations()
@@ -55,4 +55,4 @@ def test_custom_error_types() -> None:
 
 
 if __name__ == "__main__":
-    test_custom_error_types()
+    test_custom_errors()
